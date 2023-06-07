@@ -1,0 +1,7 @@
+/* eslint-disable import/no-anonymous-default-export */
+import web3 from "./web3";
+import Campaign from "../../contracts/Campaign.json";
+
+export default (address) => {
+  return new web3.eth.Contract(Campaign.abi, address);
+};
